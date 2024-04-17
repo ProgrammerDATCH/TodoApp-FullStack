@@ -1,0 +1,187 @@
+@import 'global.css';
+body {
+    background-color: #e8fcfc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e8e4ec;
+    padding: 10px 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .tasks {
+    padding: 20px;
+  }
+  
+  .task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+  }
+  
+  .task-details {
+    flex-grow: 1;
+    margin-left: 20px;
+    display: flex;
+    gap: 5px;
+  }
+
+  .task{
+    cursor: pointer;
+  }
+  .task:hover{
+    box-shadow: 0 0 3px black;
+  }
+
+  .task-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .action-img{
+    width: 20px;
+  }
+  .action-img-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .action-img-holder:hover{
+    box-shadow: 0 0 5px black;
+  }
+  .separator{
+    opacity: 60%;
+    font-size: 18px;
+    margin: 0 10px;
+    align-self: center;
+  }
+  input[type="checkbox"], .action-img{
+    cursor: pointer;
+  }
+  .title{
+    max-width: 50px;
+    align-self: center;
+  }
+  .desc{
+    max-width: 400px;
+  }
+
+  .delete-popup, .edit-popup, .add-popup, .one-popup{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  .contents{
+    background-color: #fff;
+    min-width: 400px;
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  .close-img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+
+  .action-btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .action-btns button{
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .delete-btn{
+    background-color: red;
+    color: white;
+  }
+
+  .edit-btn, .add-btn{
+    background-color: green;
+    color: white;
+  }
+
+
+  .edit-form, .add-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logout-btn{
+    color: blue;
+    cursor: pointer;
+    padding: 5px;    
+    border-radius: 10px;
+    box-shadow: 0 0 2px black;
+  }
+
+  .logout-btn:hover{
+    box-shadow: 0 0 3px blue;
+  }
+
+  .user-name{
+    font-weight: bold;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    opacity: 0.4;
+  }
+
+  .completed img{
+    opacity: 0.1;
+  }
+  

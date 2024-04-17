@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO TASKS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>TODO TASKS</h1>
+    <div class="user-info">
+        <span class="welcome">Welcome,</span> 
+        <span class="user-name" id="userName">User</span>
+        <span class="logout-btn" id="logoutBtn">Logout</span>
+    </div>
+    <div class="header">
+      <div>Tasks</div>
+      <div><img class="action-img" src="./images/add.png" onclick="showAddTodo()" /></div>
+      <div>Actions</div>
+    </div>
+    <div class="tasks" id="tasks"></div>
+
+  </div>
+
+  <div class="edit-popup" id="editPopup">
+    <div class="contents">
+      <img class="action-img close-img" id="closeBtnEdit" src="./images/close.png" />
+      <h4>Edit</h4>
+      <div id="editForm" class="edit-form">
+        <input type="hidden" id="todoId" />
+        <input type="text" id="title" />
+        <textarea id="description" cols="30" rows="10"></textarea>
+        <div class="check"><input type="checkbox" id="isCompletedCheckbox" />Mark as Completed</div>
+
+        <div class="action-btns">
+          <button class="cancel-btn" id="cancelBtnEdit">Cancel</button>
+          <button class="edit-btn" id="editBtn" onclick="editTodo()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="one-popup" id="onePopup">
+    <div class="contents">
+      <img class="action-img close-img" id="closeBtnOne" src="./images/close.png" />
+      <h4 id="oneTitle"></h4>
+      <div id="oneDescription"></div>
+      <div class="">
+        <input type="checkbox" id="oneCheck" disabled/><span id="oneCheckText"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="delete-popup" id="deletePopup">
+    <div class="contents">
+      <img class="action-img close-img" id="closeBtnDelete" src="./images/close.png" />
+      <h4>Confirm Deletion</h4>
+      <p>Delete todo <b><span id="deleteTitle"></span></b> ?</p>
+      <div class="action-btns">
+        <button class="cancel-btn" id="cancelBtn">Cancel</button>
+        <button class="delete-btn" id="deleteBtn">Delete</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="add-popup" id="addPopup">
+    <div class="contents">
+      <img class="action-img close-img" id="closeBtnAdd" src="./images/close.png" />
+      <h4>Add New Todo</h4>
+      <div id="addForm" class="add-form">
+        <input type="text" id="addTitle" placeholder="Title" />
+        <textarea id="addDescription" cols="30" rows="10" placeholder="Description"></textarea>
+
+        <div class="action-btns">
+          <button class="cancel-btn" id="cancelBtnAdd">Cancel</button>
+          <button class="add-btn" id="addBtn" onclick="addTodo()">ADD</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

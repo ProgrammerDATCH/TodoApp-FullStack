@@ -56,3 +56,9 @@ body {
     text-align: center;
   }
   
+  .global-error{
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }

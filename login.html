@@ -20,9 +20,11 @@
       <input type="password" id="password" name="password" placeholder="Password"  >
       <span class="error-span" id="passwordError"></span>
     </div>
+    <div class="error-span global-error" id="loginFormError"></div>
     <button type="submit">Login</button>
     <p id="signupLink">Don't have an account? <a href="#" id="signupBtn">Sign up instead</a></p>
   </form>
+
   <form id="signupForm" style="display: none;">
     <h1>SignUp</h1>
     <div class="form-group">
@@ -46,6 +48,7 @@
       <input type="password" id="signupPasswordConfirm" name="signupPasswordConfirm" placeholder="Confirm Password"  >
       <span class="error-span" id="signupPasswordConfirmError"></span>
     </div>
+    <div class="error-span global-error" id="signUpFormError"></div>
     <button type="submit">Sign Up</button>
     <p id="loginLink">Already have an account? <a href="#" id="loginBtn">Login instead</a></p>
   </form>

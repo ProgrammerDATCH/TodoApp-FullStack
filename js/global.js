@@ -4,6 +4,8 @@ const textArea = document.getElementsByTagName('textarea');
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].onkeydown = function (event) {
         document.getElementById(getErrorId(inputs[i].id)).innerText = ''
+        document.getElementById("loginFormError").innerText = ''
+        document.getElementById("signUpFormError").innerText = ''
     }
 }
 
